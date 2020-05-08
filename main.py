@@ -144,6 +144,7 @@ def play_game(res, req):
         res['response']['card']['type'] = 'BigImage'
         res['response']['card']['title'] = 'Что это за город?'
         res['response']['card']['image_id'] = cities[city][attempt - 1]
+        res['response']['text'] = 'Тогда сыграем!'
         res['response']['buttons'] = [
             {
                 'title': 'Помощь',
