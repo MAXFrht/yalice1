@@ -133,10 +133,10 @@ def play_game(res, req):
 
     if attempt == 1:
 
-        city = list(cities.keys())[random.randint(0, 2)]
+        city = random.choice(list(cities))
 
         while (city in sessionStorage[user_id]['guessed_cities']):
-            city = list(cities.keys())[random.randint(0, 2)]
+            city = random.choice(list(cities))
 
         sessionStorage[user_id]['city'] = city
 
